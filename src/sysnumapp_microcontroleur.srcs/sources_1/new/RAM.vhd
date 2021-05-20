@@ -19,10 +19,10 @@
 ----------------------------------------------------------------------------------
 
 
-library Work, ieee;
-use Work.nanoProcesseur_package.all;
+library design, ieee;
+use ieee.numeric_std.ALL;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -54,7 +54,7 @@ process(clk_i)
 begin
   if rising_edge(clk_i) then
     if cs_i = '1' and wr_i = '1' then
-      blocRAM(conv_integer(unsigned(operande_i(4 downto 0)))) <= data_wr_i;
+      blocRAM(to_integer(unsigned(operande_i(4 downto 0)))) <= data_wr_i;
     end if;
     
     addr_reg <= operande_i(4 downto 0);
@@ -62,5 +62,5 @@ begin
   end if;
 end process;
 
-ram_o <= blocRAM(conv_integer(unsigned(operande_i(4 downto 0))));
+ram_o <= blocRAM(to_integer(unsigned(operande_i(4 downto 0))));
 end Behavioral;
