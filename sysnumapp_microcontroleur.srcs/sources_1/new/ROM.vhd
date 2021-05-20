@@ -39,6 +39,7 @@ end ROM;
 architecture Behavioral of ROM is
 
 begin
-
+with pc_1 select
+    ir <=
 
 end Behavioral;
