@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_arith.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -34,11 +36,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ROM is
     Port ( pc_i : in STD_LOGIC_VECTOR (7 downto 0);
            ir_o : out STD_LOGIC_VECTOR (13 downto 0));
-end ROM;
-
+end ROM; 
+ 
 architecture Behavioral of ROM is
+
+constant LOADaddr: STD_LOGIC_VECTOR(5 downto 0) := "00000";
+constant STOREaddr: STD_LOGIC_VECTOR(5 downto 0) := "00010";
 
 begin
 
+with pc_i select
+  ir_o <= --début du programme en adresse 0      
+          --mnémonique opérande  adresse    
+         LOADaddr 	& X"80" when	X"00",  -- Accu = port a
+         STOREaddr 	& X"81" when	X"01";  -- port b = Accu
+         -- BRA       	& X"00" when	X"02",  -- saut à 00                    
+         -- BRA		& X"FF" when 	others;   
 
 end Behavioral;

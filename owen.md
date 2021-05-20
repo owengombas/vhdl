@@ -49,3 +49,8 @@
 ## 13.05.2021
 - Contacte avec l'enseignante pour des questions sur la RAM
 - Finition du code de la RAM
+
+## 20.05.2021
+- Code, essais et tests de la ROM
+- Appel à l'enseignante sur la définition d'un opérande avec son opcode
+- Création de constantes en exemple
