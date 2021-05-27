@@ -56,5 +56,5 @@
 - Création de constantes en exemple
 
 ## 27.05.2021
-- Création de toutes constantes de la ROM
+- Création de toutes les constantes de la ROM
 - Documentation sur la ROM et création de la logique
