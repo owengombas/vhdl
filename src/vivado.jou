@@ -2,14 +2,13 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu May 20 09:19:51 2021
-# Process ID: 6292
-# Current directory: C:/Users/owen.gombas/Desktop/vhdl/src
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10244 C:\Users\owen.gombas\Desktop\vhdl\src\sysnumapp_microcontroleur.xpr
-# Log file: C:/Users/owen.gombas/Desktop/vhdl/src/vivado.log
-# Journal file: C:/Users/owen.gombas/Desktop/vhdl/src\vivado.jou
+# Start of session at: Thu May 20 10:05:59 2021
+# Process ID: 10376
+# Current directory: C:/sysnum/sysnumapp_microcontroleur/src
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13572 C:\sysnum\sysnumapp_microcontroleur\src\sysnumapp_microcontroleur.xpr
+# Log file: C:/sysnum/sysnumapp_microcontroleur/src/vivado.log
+# Journal file: C:/sysnum/sysnumapp_microcontroleur/src\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/owen.gombas/Desktop/vhdl/src/sysnumapp_microcontroleur.xpr
-
+open_project C:/sysnum/sysnumapp_microcontroleur/src/sysnumapp_microcontroleur.xpr
 update_compile_order -fileset sources_1

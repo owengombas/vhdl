@@ -88,3 +88,10 @@ Clément Brigliano
 
 Clément Brigliano
 8:15 \ 9:45 Correction de RAM et commencement de microprocesseur
+
+## 27.05.2021
+
+Clément Brigliano
+8:15 \ 9:00 Création des .vhd et commencement du séquenceur
+
+9:00 \ 9:45 Recherche d'idée sur comment le séquenceur devrait fonctionner

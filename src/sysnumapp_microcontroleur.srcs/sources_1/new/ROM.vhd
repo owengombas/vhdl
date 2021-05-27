@@ -44,7 +44,6 @@ constant LOADaddr: STD_LOGIC_VECTOR(5 downto 0) := "00000";
 constant STOREaddr: STD_LOGIC_VECTOR(5 downto 0) := "00010";
 
 begin
-<<<<<<< HEAD
 
 with pc_i select
   ir_o <= --début du programme en adresse 0      
@@ -53,9 +52,8 @@ with pc_i select
          STOREaddr 	& X"81" when	X"01";  -- port b = Accu
          -- BRA       	& X"00" when	X"02",  -- saut à 00                    
          -- BRA		& X"FF" when 	others;   
-=======
+
 with pc_1 select
     ir <=
->>>>>>> 15f3849df882de4e4034aecae31e7b7f38fa347f
 
 end Behavioral;
