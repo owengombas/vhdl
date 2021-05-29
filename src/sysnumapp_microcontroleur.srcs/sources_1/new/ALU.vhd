@@ -32,7 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ALU is
---  Port ( );
+    Port(
+         
+        );
 end ALU;
 
 architecture Behavioral of ALU is

@@ -33,8 +33,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity sequenceur is
     Port(
-         clk_i       : in  std_logic;
-         reset_i     : in  std_logic;
+         Clk_i       : in  std_logic;
+         Reset_i     : in  std_logic;
          Opcode_ir_i   : in  std_logic_vector(5 downto 0);
          Znvc_ccr_i        : in  std_logic_vector(3 downto 0);
          Oper_sel_o    : out std_logic_vector( 2 downto 0);
