@@ -48,8 +48,27 @@ entity sequenceur is
 end sequenceur;
 
 architecture Behavioral of sequenceur is
-
+    type ETAT_TYPE is (eREPOS,eCHARGE,eSAUVER,eSELECTION);
+    signal etat : ETAT_TYPE;
 begin
-
-
+Ir_load_o <= '1' when etat = eCHARGE else  '0';
+process(Clk_i,Reset_i)
+begin
+    if reset_i='1' then
+        etat <= eREPOS;
+    elsif rising_edge(clk_i) then
+        case etat is 
+            when eREPOS =>
+                etat <= eCHARGE;
+            when eCHARGE =>
+                etat <= eSAUVER;
+            when eSAUVER =>
+                etat <= eSELECTION;        
+            when eSELECTION =>
+                etat <= eCHARGE;
+            when others =>
+                etat <= eREPOS;
+        end case;
+    end if;
+end process;
 end Behavioral;
