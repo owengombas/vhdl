@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="C:/sysnum/sysnumapp_microcontroleur/src/sysnumapp_microcontroleur.xpr">
+<Project Version="7" Minor="49" Path="C:/Users/owen.gombas/Documents/dev/vhdl/src/sysnumapp_microcontroleur.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="dc13d97c44474c04affcec9697abd103"/>
@@ -130,6 +130,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/nanoProcesseur_package.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

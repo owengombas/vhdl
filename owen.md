@@ -58,3 +58,8 @@
 ## 27.05.2021
 - Création de toutes les constantes de la ROM
 - Documentation sur la ROM et création de la logique
+
+## 03.06.2021
+- Code de la ROM
+- Toujours bloqué dessus mais j'avance
+- Documentation sur la ROM
