@@ -1,0 +1,816 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 22672
+License: Customer
+
+Current time: 	Fri Jun 04 12:59:16 CEST 2021
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2560x1440
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Programs/Vivado/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Programs/Vivado/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	oweng
+User home directory: C:/Users/oweng
+User working directory: D:/Personals/Owen/Documents/DEV/vhdl/src
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Programs/Vivado/Vivado
+HDI_APPROOT: D:/Programs/Vivado/Vivado/2020.1
+RDI_DATADIR: D:/Programs/Vivado/Vivado/2020.1/data
+RDI_BINDIR: D:/Programs/Vivado/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/oweng/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/oweng/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/oweng/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Programs/Vivado/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Personals/Owen/Documents/DEV/vhdl/src/vivado.log
+Vivado journal file location: 	D:/Personals/Owen/Documents/DEV/vhdl/src/vivado.jou
+Engine tmp dir: 	D:/Personals/Owen/Documents/DEV/vhdl/src/.Xil/Vivado-22672-venpc
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Programs/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: D:/Programs/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Programs/Vivado/Vivado/2020.1
+XILINX_VIVADO: D:/Programs/Vivado/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Programs/Vivado/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,088 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: D:\Personals\Owen\Documents\DEV\vhdl\src\sysnumapp_microcontroleur.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/owen.gombas/Documents/dev/vhdl/src' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,088 MB. GUI used memory: 60 MB. Current time: 6/4/21, 12:59:17 PM CEST
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 68 MB (+68643kb) [00:00:12]
+// [Engine Memory]: 1,088 MB (+989669kb) [00:00:12]
+// [GUI Memory]: 80 MB (+9394kb) [00:00:12]
+// [GUI Memory]: 103 MB (+19886kb) [00:00:13]
+// [GUI Memory]: 113 MB (+4402kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  3609 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Vivado/Vivado/2020.1/data/ip'. 
+// Project name: sysnumapp_microcontroleur; location: D:/Personals/Owen/Documents/DEV/vhdl/src; part: xc7a35tfgg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1233.301 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cs)
+// PAPropertyPanels.initPanels (ROM.vhd) elapsed time: 0.2s
+// [GUI Memory]: 126 MB (+7940kb) [00:00:29]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ROM.vhd]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ROM.vhd]", 3, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("ROM.vhd", 116, 638); // bP (w, cs)
+// [GUI Memory]: 144 MB (+12531kb) [00:00:40]
+// Elapsed time: 758 seconds
+selectCodeEditor("ROM.vhd", 143, 583); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 143, 583, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 121 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+dismissFileChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, (String) null); // ac (Q, F)
+// Elapsed time: 17 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Port_"); // ac (Q, F)
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "port_Entre"); // ac (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "port_Entree"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 51 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+// I (cs): Define Module: addNotify
+// Elapsed time: 125 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (I)
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+selectCodeEditor("ROM.vhd", 153, 486); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 328 seconds
+selectCodeEditor("ROM.vhd", 155, 572); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 232, 545); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 146, 557); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 200, 566); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 257, 577); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 251, 580); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 303, 578); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 438, 596); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 231, 594); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 231, 594, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("ROM.vhd", 301, 593); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 301, 592, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("ROM.vhd", 302, 592); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 211, 593); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 211, 593, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("ROM.vhd", 225, 591); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 225, 591, false, false, false, false, true); // bP (w, cs) - Double Click
+// k (cs): Text Changed: addNotify
+// Elapsed time: 90 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F (m, cs)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROM(Behavioral) (ROM.vhd)]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROM(Behavioral) (ROM.vhd)]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("ROM.vhd", 145, 563); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 153, 585); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 255, 577); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 346, 573); // bP (w, cs)
+// Elapsed time: 116 seconds
+selectCodeEditor("ROM.vhd", 673, 518); // bP (w, cs)
+// Elapsed time: 55 seconds
+selectCodeEditor("ROM.vhd", 251, 573); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 251, 573, false, false, false, false, true); // bP (w, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,088 MB. GUI used memory: 84 MB. Current time: 6/4/21, 1:29:17 PM CEST
+// Elapsed time: 314 seconds
+selectCodeEditor("ROM.vhd", 276, 561); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 234, 608); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 238, 604, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("ROM.vhd", 268, 637); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 384, 630); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 383, 622); // bP (w, cs)
+typeControlKey((HResource) null, "ROM.vhd", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "ROM.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 392, 622); // bP (w, cs)
+typeControlKey((HResource) null, "ROM.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 458, 619); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 323, 658); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 135, 643); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 135, 643, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("ROM.vhd", 144, 636); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 245, 641); // bP (w, cs)
+// Elapsed time: 22 seconds
+selectCodeEditor("ROM.vhd", 122, 596); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 26 seconds
+selectCodeEditor("ROM.vhd", 460, 622); // bP (w, cs)
+selectCodeEditor("ROM.vhd", 457, 647); // bP (w, cs)
+// Elapsed time: 146 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+dismissDialog("Add Sources"); // c (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 195 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 7, false); // B (F, cs)
+selectCodeEditor("multiplexeur.vhd", 33, 514); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 68, 521); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 59, 522); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 8, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 8, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("programCounter.vhd", 78, 344); // bP (w, cs)
+typeControlKey((HResource) null, "programCounter.vhd", 'c'); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("multiplexeur.vhd", 48, 524); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 54, 534); // bP (w, cs)
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 150, 639); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 37, 537); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 5, 537); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 0, 539); // bP (w, cs)
+// Elapsed time: 120 seconds
+selectCodeEditor("multiplexeur.vhd", 611, 805); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 101, 785); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 32, 679); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 5, 680); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 42, 706); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 30, 678); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 32, 685); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 30, 697); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 84, 788); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 0, 682); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("multiplexeur.vhd", 78, 710); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 78, 710, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("multiplexeur.vhd", 124, 754); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 179, 761); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("multiplexeur.vhd", 198, 787); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("multiplexeur.vhd", 211, 785); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 218, 786); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 219, 765); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 218, 748); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 133, 723); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 161, 703); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 180, 678); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 81, 708); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 65, 731); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 64, 747); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 126, 766); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 90, 790); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 75, 679); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 40, 681); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 343, 680); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 59, 787); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 177, 684); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 235, 691); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 447, 746); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("multiplexeur.vhd", 235, 690); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 235, 690, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 321, 725); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 417, 696); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 243, 699); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 243, 699, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 245, 724); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 245, 724, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 481, 723); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 482, 723, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("multiplexeur.vhd", 498, 704); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 468, 762); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("multiplexeur.vhd", 503, 762); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 466, 678); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 464, 711); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 473, 739); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 473, 779); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 473, 775); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 222 seconds
+selectCodeEditor("multiplexeur.vhd", 108, 772); // bP (w, cs)
+// Elapsed time: 135 seconds
+selectCodeEditor("multiplexeur.vhd", 87, 756); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("multiplexeur.vhd", 472, 766); // bP (w, cs)
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 150, 801); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 116, 709); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 44, 689); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 44, 704); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 38, 730); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 11, 757); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("multiplexeur.vhd", 129, 667); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 56, 684); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 56, 684, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 33 seconds
+selectCodeEditor("multiplexeur.vhd", 128, 808); // bP (w, cs)
+typeControlKey((HResource) null, "multiplexeur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 212, 831); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 180, 838); // bP (w, cs)
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 92, 829); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("multiplexeur.vhd", 830, 747); // bP (w, cs)
+typeControlKey((HResource) null, "multiplexeur.vhd", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+typeControlKey((HResource) null, "multiplexeur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 50, 777); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 50, 777, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("multiplexeur.vhd", 65, 771); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 65, 771, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("multiplexeur.vhd", 120, 708); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 124, 708); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 126, 734); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 125, 748); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 165, 771); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 162, 784); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 168, 684); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 130, 809); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("multiplexeur.vhd", 200, 812); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("multiplexeur.vhd", 468, 768); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 124, 756); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 84, 771); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 46, 796); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 46, 794, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("multiplexeur.vhd", 60, 798); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 70, 785); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 10, 760); // bP (w, cs)
+// Elapsed time: 61 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 3, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 3, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+dismissDialog("Add Sources"); // c (cs)
+// Elapsed time: 12 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,088 MB. GUI used memory: 79 MB. Current time: 6/4/21, 1:59:18 PM CEST
+// Elapsed time: 882 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 887 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Elapsed time: 131 seconds
+selectCodeEditor("multiplexeur.vhd", 250, 301); // bP (w, cs)
+// Elapsed time: 52 seconds
+selectCodeEditor("multiplexeur.vhd", 222, 65); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("multiplexeur.vhd", 218, 667); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 61, 707); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 4, 709); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 92, 706); // bP (w, cs)
+// Elapsed time: 338 seconds
+selectCodeEditor("multiplexeur.vhd", 387, 496); // bP (w, cs)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i (N, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced]", 4); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced, nanoProcesseur_package.vhd]", 14, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Unreferenced, nanoProcesseur_package.vhd]", 14, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cs)
+// Elapsed time: 98 seconds
+selectCodeEditor("nanoProcesseur_package.vhd", 15, 480); // bP (w, cs)
+selectCodeEditor("nanoProcesseur_package.vhd", 1, 139); // bP (w, cs)
+selectCodeEditor("nanoProcesseur_package.vhd", 19, 992); // bP (w, cs)
+selectCodeEditor("nanoProcesseur_package.vhd", 14, 1000); // bP (w, cs)
+selectCodeEditor("nanoProcesseur_package.vhd", 23, 424); // bP (w, cs)
+selectCodeEditor("nanoProcesseur_package.vhd", 20, 987); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("nanoProcesseur_package.vhd", 216, 231); // bP (w, cs)
+// Elapsed time: 39 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, microProcesseur(Behavioral) (microProcesseur.vhd)]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, microProcesseur(Behavioral) (microProcesseur.vhd)]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre_Accu(Behavioral) (registre_Accu.vhd)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre_Accu(Behavioral) (registre_Accu.vhd)]", 8, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplexeur(Behavioral) (multiplexeur.vhd)]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 231 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // i (N, cs)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,088 MB. GUI used memory: 79 MB. Current time: 6/4/21, 2:29:18 PM CEST
+// Elapsed time: 344 seconds
+selectCodeEditor("multiplexeur.vhd", 16, 889); // bP (w, cs)
+// Elapsed time: 96 seconds
+selectCodeEditor("multiplexeur.vhd", 90, 432); // bP (w, cs)
+selectCodeEditor("multiplexeur.vhd", 46, 748); // bP (w, cs)
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "port_Entree"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: 'A file with the specified name already exists. Please enter another name. (Create Source File)'
+selectButton("OptionPane.button", "OK"); // JButton (v, C)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 12 seconds
+dismissDialog("Add Sources"); // c (cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 14); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 15); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 3); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROM(Behavioral) (ROM.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre_Accu(Behavioral) (registre_Accu.vhd)]", 11, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre_Accu(Behavioral) (registre_Accu.vhd)]", 11, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("registre_Accu.vhd", 251, 733); // bP (w, cs)
+typeControlKey((HResource) null, "registre_Accu.vhd", 'c'); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false); // B (F, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: export_ip_user_files -of_objects  [get_files D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", false); // g (Q, aE): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: remove_files  D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, port_Entree.vhd]", 5, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // g (Q, aE): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: remove_files  D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+// Tcl Message: file delete -force D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "port_Entree"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 11 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+// I (cs): Define Module: addNotify
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab (J, I)
+// Elapsed time: 10 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input_value", 0, "Port Name", 0); // ab (J, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 0, "Direction", 1); // ab (J, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input_value", 0, "Port Name", 0); // ab (J, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 0, "Direction", 1); // ab (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, (String) null, 0); // ab (J, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk_i", 1, "Port Name", 0); // ab (J, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 1, "Direction", 1); // ab (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 2, (String) null, -1); // ab (J, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "reset_i", 2, "Port Name", 0); // ab (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 3, (String) null, -1); // ab (J, I)
+// Elapsed time: 10 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "enable_p_i", 3, "Port Name", 0); // ab (J, I)
+// Elapsed time: 39 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 4, (String) null, 0); // ab (J, I)
+// Elapsed time: 12 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output_value", 4, "Port Name", 0); // ab (J, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output_value ; in ; false ; 0 ; 0", 4, "in", 1); // ab (J, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 4, "Direction", 1); // ab (J, I)
+selectTableHeader(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Direction", 1); // ab (J, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, port_Entree(Behavioral) (port_Entree.vhd)]", 9, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, port_Entree(Behavioral) (port_Entree.vhd)]", 9, false, false, false, false, false, true); // B (F, cs) - Double Click
+// [GUI Memory]: 158 MB (+7475kb) [01:38:26]
+selectCodeEditor("port_Entree.vhd", 131, 286); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 10, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, programCounter(Behavioral) (programCounter.vhd)]", 10, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("programCounter.vhd", 115, 502); // bP (w, cs)
+typeControlKey((HResource) null, "programCounter.vhd", 'c'); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, port_Entree(Behavioral) (port_Entree.vhd)]", 9, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, port_Entree(Behavioral) (port_Entree.vhd)]", 9, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 201, 303); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 70, 439); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 95, 646); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, port_Entree(Behavioral) (port_Entree.vhd)]", 9, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, port_Entree(Behavioral) (port_Entree.vhd)]", 9, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectCodeEditor("port_Entree.vhd", 384, 456); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 125, 359); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 183, 142); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 183, 142, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 185, 142); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 185, 142, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "port_Entree.vhd", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 164, 95); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("port_Entree.vhd", 239, 202); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 125, 667); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 125, 667, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 102, 854); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 102, 854, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 314, 896); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 314, 896, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 394, 909); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 165, 818); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 109, 709); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 109, 709, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 67 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RAM(Behavioral) (RAM.vhd)]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RAM(Behavioral) (RAM.vhd)]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("RAM.vhd", 502, 827); // bP (w, cs)
+typeControlKey((HResource) null, "RAM.vhd", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "port_Entree.vhd", 7); // m (l, cs)
+selectCodeEditor("port_Entree.vhd", 480, 711); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 485, 711); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 485, 707); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 265, 803); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 265, 803, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 267, 796); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 267, 796, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 277, 704); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 249, 728); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("port_Entree.vhd", 251, 722); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 199, 750); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 208, 770); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 188, 785); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 276, 844); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 590 seconds
+selectCodeEditor("port_Entree.vhd", 387, 883); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 106, 910); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 46, 691); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 97, 731); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 100, 752); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 35, 769); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 34, 788); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 32, 807); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 75, 790); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 36, 829); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 25, 852); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 60, 865); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 50, 893); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 35, 886); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 50, 914); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 16, 928); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 425, 621); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 119, 937); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 261, 768); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 33, 658); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 305, 640); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 67, 914); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("port_Entree.vhd", 145, 893); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("port_Entree.vhd", 165, 912); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 194, 670); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 159, 952); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 60, 667); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 5, 648); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 200, 682); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 209, 684); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 192, 707); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 64 seconds
+selectCodeEditor("port_Entree.vhd", 206, 727); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 185, 742); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 209, 790); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 239, 793); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 189, 817); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 249, 855); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 139, 810); // bP (w, cs)
+// Elapsed time: 51 seconds
+selectCodeEditor("port_Entree.vhd", 112, 920); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+// Elapsed time: 10 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("port_Entree.vhd", 120, 654); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("port_Entree.vhd", 400, 570); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 547, 495); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 258, 501); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 243, 505); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 243, 505, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 248, 491); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 248, 491, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 520, 499); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 156, 594); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 461, 604); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 527, 497); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 146, 749); // bP (w, cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("port_Entree.vhd", 203, 715); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 203, 715, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 92, 697); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 92, 697, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 118, 447); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 118, 447, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 120, 427); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 120, 427, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "port_Entree.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 21 seconds
+selectCodeEditor("port_Entree.vhd", 172, 898); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 49 seconds
+selectCodeEditor("port_Entree.vhd", 221, 707); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("port_Entree.vhd", 162, 939); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 217, 786); // bP (w, cs)
+// Elapsed time: 99 seconds
+selectCodeEditor("port_Entree.vhd", 396, 424); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, sequenceur(Behavioral) (sequenceur.vhd)]", 29, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "port_Entree.vhd", 7); // m (l, cs)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "port_Entree.vhd", 7, false, true); // m (l, cs) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N (aI, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "registre_Accu.vhd", 6); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "microProcesseur.vhd", 5); // m (l, cs)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 119, 659); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 119, 659, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("port_Entree.vhd", 249, 564); // bP (w, cs)
+selectCodeEditor("port_Entree.vhd", 249, 564, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("port_Entree.vhd", 158, 998); // bP (w, cs)
+typeControlKey((HResource) null, "port_Entree.vhd", 'c'); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, port_Entree(Behavioral) (port_Entree.vhd)]", 24, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 16, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+dismissDialog("Add Sources"); // c (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,088 MB. GUI used memory: 100 MB. Current time: 6/4/21, 2:59:18 PM CEST
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "registre"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 10 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/registre.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/registre.vhd 
+// I (cs): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre(Behavioral) (registre.vhd)]", 11, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre(Behavioral) (registre.vhd)]", 11, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("registre.vhd", 73, 836); // bP (w, cs)
+typeControlKey((HResource) null, "registre.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("registre.vhd", 138, 433); // bP (w, cs)
+selectCodeEditor("registre.vhd", 138, 433, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("registre.vhd", 113, 432); // bP (w, cs)
+selectCodeEditor("registre.vhd", 113, 432, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "registre.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("registre.vhd", 113, 599); // bP (w, cs)
+selectCodeEditor("registre.vhd", 113, 599, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "registre.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("registre.vhd", 290, 641); // bP (w, cs)
+selectCodeEditor("registre.vhd", 290, 641, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "registre.vhd", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("registre.vhd", 191, 989); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, port_Entree(Behavioral) (port_Entree.vhd)]", 9, false); // B (F, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: export_ip_user_files -of_objects  [get_files D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+// Tcl Message: file delete -force D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.srcs/sources_1/new/port_Entree.vhd 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre(Behavioral) (registre.vhd)]", 10, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registre(Behavioral) (registre.vhd)]", 10, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("registre.vhd", 288, 450); // bP (w, cs)

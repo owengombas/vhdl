@@ -32,12 +32,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity multiplexeur is
---  Port ( );
+Port (
+    ram_i       : in  std_logic_vector(7 downto 0);
+    a_i         : in  std_logic_vector(7 downto 0);
+    b_i         : in  std_logic_vector(7 downto 0);
+    operande_i  : in  std_logic_vector(7 downto 0);
+    data_o      : out std_logic_vector(7 downto 0)
+);
 end multiplexeur;
 
 architecture Behavioral of multiplexeur is
 
 begin
 
+with operande_i select
+  data_o <=
+         a_i            when	X"F0",
+         b_i            when	X"F1",
+         ram_i          when	X"00",
+         "00000000"     when	others;
 
 end Behavioral;
