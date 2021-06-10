@@ -96,10 +96,15 @@ Clément Brigliano
 
 9:00 \ 9:45 Recherche d'idée sur comment le séquenceur devrait fonctionner
 
-
 ## 3.06.2021
 
 Clément Brigliano
 8:15 \ 9:30 Création du registre IR, PC et bloqué au séquenceur(je ne comprend pas quels changement sont éffectués a chaque étape)
 
 9:30 \ 9:45 Aide Owen dans sa création de la rom et du package
+
+
+## 10.06.2021
+
+Clément Brigliano
+8:15 \ 9:45 Séquenceur presque fini

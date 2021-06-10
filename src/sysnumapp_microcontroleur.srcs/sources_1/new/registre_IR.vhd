@@ -46,7 +46,6 @@ architecture Behavioral of registre_IR is
 begin
 Operande_o <= Ir_reg( 7 downto 0);
 Opcode_o   <= Ir_reg(13 downto 8);
-
 process(Clk_i,Reset_i)
 begin
   if Reset_i = '1' then
