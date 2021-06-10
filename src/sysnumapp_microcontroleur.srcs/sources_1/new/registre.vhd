@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 13.05.2021 15:44:08
+-- Create Date: 06/04/2021 02:59:28 PM
 -- Design Name: 
--- Module Name: ROM - Behavioral
+-- Module Name: registre - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -21,8 +21,6 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.std_logic_arith.ALL;
-use work.nanoProcesseur_package.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,20 +31,31 @@ use work.nanoProcesseur_package.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ROM is
-    Port ( pc_i : in STD_LOGIC_VECTOR (7 downto 0);
-           ir_o : out STD_LOGIC_VECTOR (11 downto 0));
-end ROM; 
- 
-architecture Behavioral of ROM is
+entity registre is
+    Port(
+         input_value    : in STD_LOGIC_VECTOR (7 downto 0);
+         enable_p_i     : in  std_logic;
+         clk_i          : in  std_logic;
+         reset_i        : in  std_logic;
+         output_value   : out STD_LOGIC_VECTOR (7 downto 0)
+     );
+end registre;
 
+architecture Behavioral of registre is
+    signal reg: STD_LOGIC_VECTOR (7 downto 0);
 begin
 
-with pc_i select
-  ir_o <= -- Création d'un petit programme en Assembleur-like 
-         LOADaddr 	& X"100" when	X"00",
-         STOREaddr 	& X"101" when	X"01",
-         BRA 	    & X"000" when	X"02",
-         BRA 	    & X"1FF" when	others;
+process(clk_i,reset_i)
+begin
+    if reset_i = '1' then
+        reg    <= (others=>'0');
+    elsif rising_edge(clk_i) then
+        if enable_p_i = '1' then
+            reg <= input_value;
+        end if;
+    end if;
+end process;
 
+output_value <= reg;
+ 
 end Behavioral;
