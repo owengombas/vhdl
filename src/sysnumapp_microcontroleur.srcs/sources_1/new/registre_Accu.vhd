@@ -32,7 +32,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity registre_Accu is
---  Port ( );
+  Port (
+    Clk_i       : in  std_logic;
+    Reset_i     : in  std_logic;
+    Accu_load_i       : in  std_logic;
+    Accu_i   : in  std_logic_vector(7 downto 0);
+    Data_out_o   : out  std_logic_vector(7 downto 0)
+  );
 end registre_Accu;
 
 architecture Behavioral of registre_Accu is

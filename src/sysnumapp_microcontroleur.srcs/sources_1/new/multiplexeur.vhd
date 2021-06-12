@@ -44,12 +44,16 @@ end multiplexeur;
 architecture Behavioral of multiplexeur is
 
 begin
+    
+    data_o <= ram_i when operande_i(7 downto 4) = X"0" else "00000000";
+    data_o <= a_i when operande_i = X"F0" else "00000000";
+    data_o <= b_i when operande_i = X"F1" else "00000000";
 
-with operande_i select
-  data_o <=
-         a_i            when	X"F0",
-         b_i            when	X"F1",
-         ram_i          when	X"00",
-         "00000000"     when	others;
+    -- with operande_i select
+    --  data_o <=
+    --          a_i            when	X"F0",
+    --          b_i            when	X"F1",
+    --         ram_i          when	X"00",
+    --         "00000000"     when	others;
 
 end Behavioral;
