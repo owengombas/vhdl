@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use work.nanoProcesseur_package.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -40,6 +40,7 @@ entity sequenceur is
          Oper_sel_o    : out std_logic_vector( 2 downto 0);
          Opper_load_o  : out std_logic;
          Pc_inc_o  : out std_logic;
+         Pc_load_o  : out std_logic;
          Ir_load_o  : out std_logic;
          Data_wr_o  : out std_logic;
          Ccr_load_o  : out std_logic;
@@ -48,24 +49,128 @@ entity sequenceur is
 end sequenceur;
 
 architecture Behavioral of sequenceur is
-    type ETAT_TYPE is (eREPOS,eCHARGE,eSAUVER,eSELECTION);
+    type ETAT_TYPE is (eREPOS,eCHARGEIR,eSELECTIONOP,ESAUVER);
     signal etat : ETAT_TYPE;
 begin
-Ir_load_o <= '1' when etat = eCHARGE else  '0';
 process(Clk_i,Reset_i)
 begin
     if reset_i='1' then
         etat <= eREPOS;
     elsif rising_edge(clk_i) then
+        Ccr_load_o <= '0';
+        Acc_load_o <= '0';
+        Oper_sel_o <= (others => '0');
+        Pc_inc_o <= '0';
+        Pc_load_o <= '0';
+        Ir_load_o <= '0';
         case etat is 
             when eREPOS =>
-                etat <= eCHARGE;
-            when eCHARGE =>
-                etat <= eSAUVER;
-            when eSAUVER =>
-                etat <= eSELECTION;        
-            when eSELECTION =>
-                etat <= eCHARGE;
+                etat <= eCHARGEIR;
+            when eCHARGEIR =>
+                etat <= eSELECTIONOP;
+                Ir_load_o <= '1';
+                case Opcode_ir_i is
+                    when BZ0 =>
+                        if Znvc_ccr_i(3) = '0' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                    when BZ1 =>
+                        if Znvc_ccr_i(3) = '1' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                    when BC0 =>
+                        if Znvc_ccr_i(0) = '0' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                    when BC1 =>
+                        if Znvc_ccr_i(0) = '1' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                    when BV0 =>
+                        if Znvc_ccr_i(1) = '0' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                    when BV1 =>
+                        if Znvc_ccr_i(1) = '1' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                    when BN0 =>
+                        if Znvc_ccr_i(2) = '0' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                    when BN1 =>
+                        if Znvc_ccr_i(2) = '1' then
+                            Pc_inc_o <= '0';
+                            Pc_load_o <= '1';
+                        else
+                            Pc_inc_o <= '1';
+                            Pc_load_o <= '0';
+                        end if;
+                     when  BRA =>
+                        Pc_inc_o <= '0';
+                        Pc_load_o <= '1';                
+                     when others =>
+                        Pc_inc_o <= '1';
+                        Pc_load_o <= '0';
+                end case; 
+            when eSELECTIONOP =>
+                etat <= ESAUVER;
+                case Opcode_ir_i is
+                     when LOADconst | NEGconst =>
+                        Oper_sel_o <= "001";
+                     when LOADaddr | NEGaddr | INCaddr | ADCconst  =>
+                        Oper_sel_o <= "010";   
+                     when andconst | orconst | xorconst | addconst | ADCconst =>
+                        Oper_sel_o <= "011";   
+                     when andaddr | oraddr | xoraddr | addaddr | adcaddr =>
+                        Oper_sel_o <= "100";   
+                     when rolaccu | roraccu | DECaccu | INCaccu | NEGaccu =>
+                        Oper_sel_o <= "101";   
+                     when others =>
+                        Oper_sel_o <= (others => '0');
+                end case;        
+            when ESAUVER =>
+                etat <= eCHARGEIR;
+                case Opcode_ir_i is
+                    when LOADconst | LOADaddr | ANDconst | ANDaddr | ORconst | ORaddr | XORconst | XORaddr |
+                     ROLaccu | RORaccu | ADDconst | ADDaddr | ADCconst | ADCaddr | NEGaccu | NEGconst | NEGaddr | INCaccu | INCaddr | DECaccu | DECaddr =>
+                        Ccr_load_o <= '1';
+                        Acc_load_o <= '1';
+                     when SETC | CLRC | TRFNC =>
+                        Ccr_load_o <= '1';
+                        Acc_load_o <= '0';
+                     when others =>
+                        Ccr_load_o <= '0';
+                        Acc_load_o <= '0';
+                end case;
             when others =>
                 etat <= eREPOS;
         end case;
