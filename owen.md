@@ -63,3 +63,25 @@
 - Code de la ROM
 - Toujours bloqué dessus mais j'avance
 - Documentation sur la ROM
+
+## 03.06.2021
+- Code de la ROM
+- Toujours bloqué dessus mais j'avance
+- Documentation sur la ROM
+
+## 05.06.2021
+- La ROM est comprise
+- Finition de la ROM
+- Compréhension et étude du micro-controleur
+
+## 06.06.2021
+- Mise en place de l'entiereté du micro-controleur
+
+## 10.06.2021
+- Mise en place de l'entiereté du micro-controleur
+
+## 13.06.2021
+- Mise en place des liens du micro-processeur
+
+## 14.06.2021
+- Mise en place des liens du micro-controleur
