@@ -35,7 +35,7 @@ use work.nanoProcesseur_package.all;
 
 entity ROM is
     Port ( pc_i : in STD_LOGIC_VECTOR (7 downto 0);
-           ir_o : out STD_LOGIC_VECTOR (11 downto 0));
+           instruct_o : out STD_LOGIC_VECTOR (11 downto 0));
 end ROM; 
  
 architecture Behavioral of ROM is
@@ -43,7 +43,7 @@ architecture Behavioral of ROM is
 begin
 
     with pc_i select
-      ir_o <= -- Création d'un petit programme en Assembleur-like 
+      instruct_o <= -- Création d'un petit programme en Assembleur-like 
              LOADaddr 	& X"100" when	X"00",
              STOREaddr 	& X"101" when	X"01",
              BRA 	    & X"000" when	X"02",

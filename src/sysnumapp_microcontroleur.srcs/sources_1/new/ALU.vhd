@@ -36,7 +36,7 @@ entity ALU is
         Oper1_i: in  std_logic_vector(7 downto 0);
         Oper2_i: in  std_logic_vector(7 downto 0);
         CCR_i: in  std_logic_vector(3 downto 0);
-        Opcode_i: in  std_logic;
+        Opcode_i: in  std_logic_vector(5 downto 0);
         ALU_result_o: in  std_logic_vector(8 downto 0)
     );
 end ALU;

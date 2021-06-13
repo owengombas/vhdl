@@ -35,9 +35,9 @@ use ieee.std_logic_unsigned.all;
 
 entity RAM is
     Port ( clk_i : in STD_LOGIC;
-           cs_i : in STD_LOGIC;
-           wr_i : in STD_LOGIC;
+           reset_i : in STD_LOGIC;
            operande_i : in STD_LOGIC_VECTOR (7 downto 0);
+           enable_r_i : in STD_LOGIC;
            data_wr_i : in STD_LOGIC_VECTOR (7 downto 0);
            ram_o : out STD_LOGIC_VECTOR (7 downto 0));
 end RAM;
@@ -47,13 +47,12 @@ architecture Behavioral of RAM is
   signal   blocRAM : blocRAM_type;
   
   signal   addr_reg : std_logic_vector(4 DOWNTO 0);
-
 begin
 
-process(clk_i)
+process(clk_i, reset_i)
 begin
   if rising_edge(clk_i) then
-    if cs_i = '1' and wr_i = '1' then
+    if enable_r_i = '1' then
       blocRAM(to_integer(unsigned(operande_i(4 downto 0)))) <= data_wr_i;
     end if;
     
@@ -63,4 +62,5 @@ begin
 end process;
 
 ram_o <= blocRAM(to_integer(unsigned(operande_i(4 downto 0))));
+
 end Behavioral;
