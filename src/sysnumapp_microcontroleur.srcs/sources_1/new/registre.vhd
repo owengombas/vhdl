@@ -48,7 +48,7 @@ begin
 process(clk_i,reset_i)
 begin
     if reset_i = '1' then
-        reg    <= (others=>'0');
+        reg <= (others=>'0');
     elsif rising_edge(clk_i) then
         if enable_p_i = '1' then
             reg <= input_value;

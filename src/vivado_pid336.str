@@ -1,0 +1,379 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 336
+License: Customer
+
+Current time: 	Sat Jun 12 14:43:08 CEST 2021
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2560x1440
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Programs/Vivado/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Programs/Vivado/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	oweng
+User home directory: C:/Users/oweng
+User working directory: D:/Personals/Owen/Documents/DEV/vhdl/src
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Programs/Vivado/Vivado
+HDI_APPROOT: D:/Programs/Vivado/Vivado/2020.1
+RDI_DATADIR: D:/Programs/Vivado/Vivado/2020.1/data
+RDI_BINDIR: D:/Programs/Vivado/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/oweng/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/oweng/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/oweng/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Programs/Vivado/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Personals/Owen/Documents/DEV/vhdl/src/vivado.log
+Vivado journal file location: 	D:/Personals/Owen/Documents/DEV/vhdl/src/vivado.jou
+Engine tmp dir: 	D:/Personals/Owen/Documents/DEV/vhdl/src/.Xil/Vivado-336-venpc
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Programs/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: D:/Programs/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Programs/Vivado/Vivado/2020.1
+XILINX_VIVADO: D:/Programs/Vivado/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Programs/Vivado/Vivado/2020.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,011 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: D:\Personals\Owen\Documents\DEV\vhdl\src\sysnumapp_microcontroleur.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 128 MB (+131400kb) [00:00:07]
+// [Engine Memory]: 1,011 MB (+908380kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  2449 ms.
+// Tcl Message: open_project D:/Personals/Owen/Documents/DEV/vhdl/src/sysnumapp_microcontroleur.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Vivado/Vivado/2020.1/data/ip'. 
+// Project name: sysnumapp_microcontroleur; location: D:/Personals/Owen/Documents/DEV/vhdl/src; part: xc7a35tfgg484-1
+dismissDialog("Open Project"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,011 MB. GUI used memory: 64 MB. Current time: 6/12/21, 2:43:09 PM CEST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 1); // B (F, cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 138 MB (+4449kb) [00:18:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,011 MB. GUI used memory: 79 MB. Current time: 6/12/21, 3:13:09 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,011 MB. GUI used memory: 70 MB. Current time: 6/12/21, 3:43:09 PM CEST
+// Elapsed time: 4424 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, microControleur(Behavioral) (microControleur.vhd)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, microControleur(Behavioral) (microControleur.vhd)]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, microProcesseur(Behavioral) (microProcesseur.vhd)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, microProcesseur(Behavioral) (microProcesseur.vhd)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 109 seconds
+selectCodeEditor("microProcesseur.vhd", 250, 465); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 49, 668); // bP (w, cs)
+// Elapsed time: 43 seconds
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 53, 476); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 23, 478); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 16, 476); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 130, 705); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 44, 683); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 45, 669); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 51, 675); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 0, 678); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 47, 680); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 112, 483); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("microProcesseur.vhd", 116, 459); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 116, 459, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 12 seconds
+selectCodeEditor("microProcesseur.vhd", 19, 637); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 72, 637); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("microProcesseur.vhd", 109, 407); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 392, 483); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 386, 603); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 255, 476); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("microProcesseur.vhd", 49, 405); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 49, 405, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 178 seconds
+selectCodeEditor("microProcesseur.vhd", 232, 433); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 217, 429); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("microProcesseur.vhd", 540, 598); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 129, 557); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 133, 557, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("microProcesseur.vhd", 159, 620); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 133, 640); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 95, 639); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 64, 635); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 60, 540); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 61, 577); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 73, 538); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("microProcesseur.vhd", 317, 579); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 133, 593); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 51, 345); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 34, 348); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 33, 389); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 494, 520); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 120, 508); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 521, 494); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 99, 514); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 41, 348); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 31, 345); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 476, 538); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 72, 347); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 6, 352); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 0, 344); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 1, 345); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 90, 553); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("microProcesseur.vhd", 53, 549); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 15, 553); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 2, 555); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 128, 538); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 139, 531); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 157, 392); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 141, 654); // bP (w, cs)
+// Elapsed time: 51 seconds
+selectCodeEditor("microProcesseur.vhd", 90, 634); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 72, 651); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("microProcesseur.vhd", 72, 602); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 72, 602, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 36 seconds
+selectCodeEditor("microProcesseur.vhd", 233, 354); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 233, 354, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("microProcesseur.vhd", 234, 365); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 234, 365, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 229, 546); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 229, 546, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 99, 559); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 75, 645); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("microProcesseur.vhd", 66, 644); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 70, 602); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 96, 639); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 277, 639); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("microProcesseur.vhd", 63, 658); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 80, 668); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 151, 624); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 206, 625); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 206, 625, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 60, 645); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("microProcesseur.vhd", 87, 641); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 53, 559); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 53, 559, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("microProcesseur.vhd", 213, 599); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 216, 474); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 222, 394); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 208, 350); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 291, 497); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 310, 564); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 311, 569); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 209, 493); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 211, 373); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 209, 219); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 86, 228); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 73, 647); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 109, 513); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 48, 608); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 48, 608, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("microProcesseur.vhd", 55, 602); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 54, 600); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 135, 603); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 135, 603, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("microProcesseur.vhd", 165, 626); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 79, 645); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 89, 643); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 76, 643); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 31, 678); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 77, 661); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 98, 670); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 26, 662); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 26, 662, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("microProcesseur.vhd", 116, 664); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 205, 657); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 205, 657, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 135, 684); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 312, 345); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 151, 681); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 78, 669); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 140, 490); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("microProcesseur.vhd", 277, 585); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 277, 585, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("microProcesseur.vhd", 215, 257); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 217, 246); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 217, 246, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 251, 561); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 251, 561, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 115, 557); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 78, 651); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+typeControlKey((HResource) null, "microProcesseur.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 83, 269); // bP (w, cs)
+typeControlKey((HResource) null, "microProcesseur.vhd", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("microProcesseur.vhd", 106, 501); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 131, 421); // bP (w, cs)
+selectCodeEditor("microProcesseur.vhd", 84, 667); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,011 MB. GUI used memory: 76 MB. Current time: 6/12/21, 4:13:10 PM CEST
+// Elapsed time: 278 seconds
+selectCodeEditor("microProcesseur.vhd", 459, 423); // bP (w, cs)

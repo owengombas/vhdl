@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 27.05.2021 08:39:24
+-- Create Date: 06/12/2021 02:38:36 PM
 -- Design Name: 
--- Module Name: registre_CCR - Behavioral
+-- Module Name: ALU2 - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,32 +31,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity registre_CCR is
-Port (
-    ccr_load_i: in STD_LOGIC;
-    ccr_alu_i: in STD_LOGIC_VECTOR(3 downto 0);
-    ccr_o: out STD_LOGIC_VECTOR(3 downto 0);
-    clk_i : in STD_LOGIC;
-    reset_i : in STD_LOGIC
-);
-end registre_CCR;
+entity ALU2 is
+    Port ( ALU_result_i : in STD_LOGIC_VECTOR (8 downto 0);
+           Accu_o : out STD_LOGIC_VECTOR (7 downto 0);
+           CCR_alu_o : out STD_LOGIC_VECTOR (3 downto 0));
+end ALU2;
 
-architecture Behavioral of registre_CCR is
-    signal reg: STD_LOGIC_VECTOR (3 downto 0);
+architecture Behavioral of ALU2 is
+
 begin
-
-process(clk_i,reset_i)
-begin
-    if reset_i = '1' then
-        reg <= (others=>'0');
-    elsif rising_edge(clk_i) then
-        if ccr_load_i = '1' then
-            reg <= ccr_alu_i;
-        end if;
-    end if;
-end process;
-
-ccr_o <= reg;
 
 
 end Behavioral;
