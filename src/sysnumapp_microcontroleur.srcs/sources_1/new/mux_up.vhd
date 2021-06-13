@@ -37,8 +37,8 @@ entity mux_up is
            data_out_i : in STD_LOGIC_VECTOR (7 downto 0);
            oper_load_i : in STD_LOGIC;
            oper_sel_i : in STD_LOGIC_VECTOR (2 downto 0);
-           --clk_i : in STD_LOGIC;
-           --reset_i : in STD_LOGIC;
+           clk_i : in STD_LOGIC;
+           reset_i : in STD_LOGIC;
            oper1_o : out STD_LOGIC_VECTOR (7 downto 0);
            oper2_o : out STD_LOGIC_VECTOR (7 downto 0));
 end mux_up;
@@ -46,15 +46,34 @@ end mux_up;
 architecture Behavioral of mux_up is
     signal reg: STD_LOGIC_VECTOR (7 downto 0);
 begin
-
-with oper_sel_i select
-  oper1_o <= data_out_i     when "010",
-             operande_i     when "100",
-             data_i         when others;
-               
-with oper_sel_i select
-  oper2_o <= data_out_i     when "010",
-             operande_i     when "100",
-             data_i         when others;
-
+process(clk_i, reset_i)
+begin
+    if reset_i='1' then
+        oper1_o <= "00000000";
+        oper2_o <= "00000000";
+    elsif rising_edge(clk_i) then
+        if oper_load_i = '1' then
+            case oper_sel_i is
+                when "000" =>
+                    oper1_o <= "00000000";
+                    oper2_o <= "00000000";
+                when "001" =>
+                    oper1_o <= operande_i;
+                    oper2_o <= "00000000";
+                when "010" =>
+                    oper1_o <= data_i;
+                    oper2_o <= "00000000";
+                when "011" =>
+                    oper1_o <= data_out_i;
+                    oper2_o <= operande_i;
+                when "100" =>
+                    oper1_o <= data_out_i;
+                    oper2_o <= data_i;
+                when "101" =>
+                    oper1_o <= data_out_i;
+                    oper2_o <= "00000000";                
+            end case;
+        end if; 
+    end if;
+end process;
 end Behavioral;
