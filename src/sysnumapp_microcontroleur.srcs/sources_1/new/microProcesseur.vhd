@@ -38,7 +38,7 @@ entity microProcesseur is
     ac_mux_data_i: in STD_LOGIC_VECTOR (7 downto 0);
     ac_ir_instr_i: in STD_LOGIC_VECTOR (13 downto 0);
     ap_mux_data_o: out STD_LOGIC_VECTOR (7 downto 0);
-    ap_ir_opcode_o: out STD_LOGIC_VECTOR (5 downto 0);
+    ap_ir_operande_o: out STD_LOGIC_VECTOR (7 downto 0);
     ap_seq_data_wr_o: out STD_LOGIC;
     ap_pc_o: out STD_LOGIC_VECTOR (7 downto 0)
   );
@@ -167,7 +167,7 @@ architecture Behavioral of microProcesseur is
     signal mux_alu1_oper2: std_logic_vector(7 downto 0);
     
     signal alu1_accu_accu: std_logic_vector(7 downto 0);
-    signal alu1_ccr_ccr_alu: std_logic_vector(7 downto 0);
+    signal alu1_ccr_ccr_alu: std_logic_vector(3 downto 0);
 begin
 
 sequenceur_inst: sequenceur
@@ -211,7 +211,7 @@ registre_Accu_inst : registre_Accu
         Clk_i       => clk_i,
         reset_i     => reset_i,
         accu_load_i => seq_accu_acc_load,
-        accu_i => alu1_ccr_ccr_alu,
+        accu_i => alu1_accu_accu,
         data_out_o => accu_data_out
     );
 
@@ -256,7 +256,7 @@ ALU1_inst : ALU
 --     );
 
 ap_mux_data_o <= accu_data_out;
-ap_ir_opcode_o <= ir_opcode;
+ap_ir_operande_o <= ir_operand;
 ap_seq_data_wr_o <= seq_ac_data_wr;
 ap_pc_o <= pc_ac_pc;
 

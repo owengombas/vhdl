@@ -71,7 +71,10 @@ begin
                     oper2_o <= data_i;
                 when "101" =>
                     oper1_o <= data_out_i;
-                    oper2_o <= "00000000";                
+                    oper2_o <= "00000000";  
+                when others =>
+                    oper1_o <= "00000000";
+                    oper2_o <= "00000000";         
             end case;
         end if; 
     end if;

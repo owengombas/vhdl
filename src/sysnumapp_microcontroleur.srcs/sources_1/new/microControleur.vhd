@@ -50,7 +50,7 @@ architecture Behavioral of microControleur is
             ac_mux_data_i: in STD_LOGIC_VECTOR (7 downto 0);
             ac_ir_instr_i: in STD_LOGIC_VECTOR (13 downto 0);
             ap_mux_data_o: out STD_LOGIC_VECTOR (7 downto 0);
-            ap_ir_opcode_o: out STD_LOGIC_VECTOR (5 downto 0);
+            ap_ir_operande_o: out STD_LOGIC_VECTOR (7 downto 0);
             ap_seq_data_wr_o: out STD_LOGIC;
             ap_pc_o: out STD_LOGIC_VECTOR (7 downto 0)
         );
@@ -140,7 +140,7 @@ ap_inst: microProcesseur
         ac_mux_data_i => mux_ap_data,
         ac_ir_instr_i => rom_ap_instruct,
         ap_mux_data_o => ap_data_out,
-        ap_ir_opcode_o => ap_operande,
+        ap_ir_operande_o => ap_operande,
         ap_seq_data_wr_o => ap_ram_data_wr,
         ap_pc_o => ap_pc
     );
@@ -219,5 +219,6 @@ port_b_out_inst: registre
         reset_i => reset_i,
         input_value => ap_data_out
     );
+
 
 end Behavioral;

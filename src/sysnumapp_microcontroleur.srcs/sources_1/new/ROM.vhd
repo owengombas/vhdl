@@ -44,8 +44,8 @@ begin
 
     with pc_i select
       instruct_o <= -- Création d'un petit programme en Assembleur-like 
-             LOADaddr 	& X"100" when	X"00",
-             STOREaddr 	& X"101" when	X"01",
+             LOADaddr 	& X"F0" when	X"00",
+             STOREaddr 	& X"F4" when	X"01",
              BRA 	    & X"000" when	X"02",
              BRA 	    & X"1FF" when	others;
     

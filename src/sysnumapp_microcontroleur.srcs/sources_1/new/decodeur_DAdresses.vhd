@@ -56,4 +56,5 @@ begin
     
     -- RAM
     enable_r_o <= '1' when pc_i(7 downto 5) = "000" else '0';
+
 end Behavioral;

@@ -80,7 +80,7 @@ begin
                     CCR(0) <= '1';
                 end if; 
             when XORconst | XORaddr =>
-                ALU_result <= (Oper1_i xor Oper2_i);
+                ALU_result <= '0' & (Oper1_i xor Oper2_i);
                 if ALU_result = "000000000" then
                     CCR(3) <= '1';
                 end if;
