@@ -89,7 +89,7 @@ architecture Behavioral of microProcesseur is
              Pc_load_o: out std_logic;
              Opcode_ir_i   : in  std_logic_vector(5 downto 0);
              Znvc_ccr_i        : in  std_logic_vector(3 downto 0);
-             Oper_sel_o    : out std_logic_vector( 2 downto 0);
+             Oper_sel_o    : out std_logic_vector(2 downto 0);
              Opper_load_o  : out std_logic;
              Ir_load_o  : out std_logic;
              Data_wr_o  : out std_logic;
@@ -121,21 +121,22 @@ architecture Behavioral of microProcesseur is
     
     component ALU is
         Port(
-            Oper1_i: in  std_logic_vector(7 downto 0);
-            Oper2_i: in  std_logic_vector(7 downto 0);
-            CCR_i: in  std_logic_vector(3 downto 0);
-            Opcode_i: in  std_logic_vector(5 downto 0);
-            ALU_result_o: in  std_logic_vector(8 downto 0)
+            Oper1_i : in  std_logic_vector(7 downto 0);
+            Oper2_i : in  std_logic_vector(7 downto 0);
+            Opcode_i    : in  std_logic_vector(5 downto 0);
+            CCR_i       : in  std_logic_vector(3 downto 0);
+            CCR_alu_o   : out std_logic_vector(3 downto 0);
+            Accu_o   : out std_logic_vector(7 downto 0)
         );
     end component ALU;
 
-    component ALU2 is
-        Port (
-            ALU_result_i : in STD_LOGIC_VECTOR (8 downto 0);
-            Accu_o : out STD_LOGIC_VECTOR (7 downto 0);
-            CCR_alu_o : out STD_LOGIC_VECTOR (3 downto 0)
-        );
-    end component ALU2;
+    -- component ALU2 is
+    --     Port (
+    --         ALU_result_i : in STD_LOGIC_VECTOR (8 downto 0);
+    --         Accu_o : out STD_LOGIC_VECTOR (7 downto 0);
+    --         CCR_alu_o : out STD_LOGIC_VECTOR (3 downto 0)
+    --     );
+    -- end component ALU2;
         
     signal ir_pc_operand: std_logic_vector(7 downto 0);
     signal ir_mux_operand: std_logic_vector(7 downto 0);
@@ -148,7 +149,7 @@ architecture Behavioral of microProcesseur is
     signal accu_data_out: std_logic_vector(7 downto 0); -- OUT
     
     signal seq_mux_oper_load: std_logic;
-    signal seq_mux_oper_sel: std_logic_vector(3 downto 0);
+    signal seq_mux_oper_sel: std_logic_vector(2 downto 0);
     signal seq_pc_pc_inc: std_logic;
     signal seq_pc_pc_load: std_logic;
     signal seq_ir_ir_load: std_logic;
@@ -162,13 +163,11 @@ architecture Behavioral of microProcesseur is
     
     signal pc_ac_pc: std_logic_vector(7 downto 0);
     
-    signal alu1_alu2_alu_result: std_logic_vector(8 downto 0);
-    
     signal mux_alu1_oper1: std_logic_vector(7 downto 0);
     signal mux_alu1_oper2: std_logic_vector(7 downto 0);
     
-    signal alu2_accu_accu: std_logic_vector(7 downto 0);
-    signal alu2_ccr_ccr_alu: std_logic_vector(3 downto 0);
+    signal alu1_accu_accu: std_logic_vector(7 downto 0);
+    signal alu1_ccr_ccr_alu: std_logic_vector(7 downto 0);
 begin
 
 sequenceur_inst: sequenceur
@@ -203,7 +202,7 @@ registre_CCR_inst : registre_CCR
         Clk_i       => clk_i,
         reset_i     => reset_i,
         ccr_o => ccr_ccr,
-        ccr_alu_i => alu2_ccr_ccr_alu,
+        ccr_alu_i => alu1_ccr_ccr_alu,
         ccr_load_i => seq_ccr_ccr_load
     );
  
@@ -212,7 +211,7 @@ registre_Accu_inst : registre_Accu
         Clk_i       => clk_i,
         reset_i     => reset_i,
         accu_load_i => seq_accu_acc_load,
-        accu_i => alu2_ccr_ccr_alu,
+        accu_i => alu1_ccr_ccr_alu,
         data_out_o => accu_data_out
     );
 
@@ -244,16 +243,17 @@ ALU1_inst : ALU
         oper2_i => mux_alu1_oper2,
         ccr_i => ccr_alu1_ccr,
         opcode_i => ir_opcode,
-        alu_result_o => alu1_alu2_alu_result
+        ccr_alu_o => alu1_ccr_ccr_alu,
+        Accu_o => alu1_accu_accu
     );
+         
 
-ALU2_inst : ALU2
-    port map(
-        alu_result_i => alu1_alu2_alu_result,
-        accu_o => alu2_accu_accu,
-        ccr_alu_o => alu2_accu_accu
-    );
-
+-- ALU2_inst : ALU2
+--     port map(
+--         alu_result_i => alu1_alu2_alu_result,
+--         accu_o => alu2_accu_accu,
+--         ccr_alu_o => alu2_accu_accu
+--     );
 
 ap_mux_data_o <= accu_data_out;
 ap_ir_opcode_o <= ir_opcode;

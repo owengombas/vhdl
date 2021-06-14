@@ -45,7 +45,6 @@ end decodeur_DAdresses;
 architecture Behavioral of decodeur_DAdresses is
 
 begin
-
     -- Tout les registre (entrées et sorties)
     -- enable_p_o <= '1' when pc_i(7 downto 4) = X"F" else '0';
     
@@ -57,6 +56,4 @@ begin
     
     -- RAM
     enable_r_o <= '1' when pc_i(7 downto 5) = "000" else '0';
-   
-
 end Behavioral;

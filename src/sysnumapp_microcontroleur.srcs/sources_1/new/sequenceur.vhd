@@ -39,7 +39,7 @@ entity sequenceur is
          Pc_load_o: out std_logic;
          Opcode_ir_i   : in  std_logic_vector(5 downto 0);
          Znvc_ccr_i        : in  std_logic_vector(3 downto 0);
-         Oper_sel_o    : out std_logic_vector( 2 downto 0);
+         Oper_sel_o    : out std_logic_vector(2 downto 0);
          Opper_load_o  : out std_logic;
          Ir_load_o  : out std_logic;
          Data_wr_o  : out std_logic;
